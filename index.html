@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    label{
+      font-size: 30px;
+    }
+
+    #submit{
+      font-size: 30px;
+    }
+
+    #subresult{
+      font-size: 30px;
+    }
+
+    #mainresult{
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <label>Codecraftsman </label><br><br>
+  
+
+
+  <input type ="checkbox" id="checkbox">
+  <label for="Follow">Follow</label><br><br>
+
+  <input type="radio" id="Like" name="card">
+  <label >Like </label>
+
+  <input type="radio" id="share" name="card">
+  <label >Share</label><br><br>
+
+
+  <input type="submit" id="submit">
+
+  <p id ="subresult"></p>
+  <p id="mainresult"></p>
+
+  <script>
+    const checkbox = document.getElementById('checkbox');
+    const Like = document.getElementById('Like');
+    const share = document.getElementById('share');
+    const submit = document.getElementById('submit');
+    const subresult = document.getElementById('subresult');
+    const mainresult = document.getElementById('mainresult');
+
+    submit.onclick = function (){
+
+      if(checkbox.checked){
+         subresult.textContent = "You followed codecraftsman";
+      }
+      else{
+        subresult.textContent = "You are not following codecraftsman";
+      }
+
+      if(Like.checked){
+        mainresult.textContent = "You like the content";
+      }
+      else if(share.checked){
+        mainresult.textContent = "You Share the content";
+      }
+      else {
+        mainresult.textContent ="You dont like or Share content";
+      }
+
+
+
+
+    }
+
+   
+
+
+  </script>
+
+</body>
+</html>
